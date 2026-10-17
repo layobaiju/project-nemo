@@ -1,0 +1,36 @@
+{
+  "name": "atlas-workspace",
+  "version": "0.8.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "node scripts/sync-maplibre-worker.mjs",
+    "build": "tsc -b && vite build",
+    "host": "node server/host.mjs",
+    "start": "node server/host.mjs",
+    "test": "node --test tests/logic.test.mjs tests/security.test.mjs tests/store.test.mjs tests/sync.test.mjs tests/explore.test.mjs tests/explore-client.test.mjs tests/search-around.test.mjs tests/ops.test.mjs tests/tiles.test.mjs tests/entities.test.mjs tests/watch.test.mjs tests/geocode.test.mjs tests/host.test.mjs"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.8.5",
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "^6.14.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "terra-draw": "1.35.0",
+    "terra-draw-maplibre-gl-adapter": "1.4.1",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/topojson-client": "3.1.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

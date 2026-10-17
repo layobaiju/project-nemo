@@ -1,0 +1,174 @@
+{
+ "id": "Q1317",
+ "label": "Osama bin Laden",
+ "groups": [
+  {
+   "key": "out:P19",
+   "property": "P19",
+   "relation": "place of birth",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q3692",
+     "label": "Riyadh",
+     "description": "capital of Saudi Arabia",
+     "kind": "Place"
+    }
+   ]
+  },
+  {
+   "key": "out:P20",
+   "property": "P20",
+   "relation": "place of death",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q3065522",
+     "label": "Osama bin Laden's compound in Abbottabad (2005-2012)",
+     "description": "compound in Pakistan",
+     "kind": "Place"
+    }
+   ]
+  },
+  {
+   "key": "out:P27",
+   "property": "P27",
+   "relation": "country of citizenship",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q851",
+     "label": "Saudi Arabia",
+     "description": "country in West Asia",
+     "kind": "Place"
+    }
+   ]
+  },
+  {
+   "key": "out:P463",
+   "property": "P463",
+   "relation": "member of",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q34490",
+     "label": "Al-Qaeda",
+     "description": "Salafi jihadist militant organization",
+     "kind": "Organisation"
+    }
+   ]
+  },
+  {
+   "key": "out:P106",
+   "property": "P106",
+   "relation": "occupation",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q13582652",
+     "label": "civil engineer",
+     "description": "engineer specialising in civil engineering",
+     "kind": "Note"
+    }
+   ]
+  },
+  {
+   "key": "out:P793",
+   "property": "P793",
+   "relation": "significant event",
+   "direction": "out",
+   "items": [
+    {
+     "id": "Q10806",
+     "label": "September 11 attacks",
+     "description": "2001 terrorist attacks in the United States",
+     "kind": "Historical event"
+    },
+    {
+     "id": "Q19085",
+     "label": "killing of Osama bin Laden",
+     "description": "2011 killing by U.S. special forces in Pakistan",
+     "kind": "Historical event"
+    }
+   ]
+  },
+  {
+   "key": "in:P112",
+   "property": "P112",
+   "relation": "P112",
+   "direction": "in",
+   "items": [
+    {
+     "id": "Q34490",
+     "label": "Al-Qaeda",
+     "description": "Salafi jihadist militant organization",
+     "kind": "Organisation"
+    },
+    {
+     "id": "Q1194962",
+     "label": "Maktab al-Khidamat",
+     "description": "organization",
+     "kind": "Organisation"
+    }
+   ]
+  },
+  {
+   "key": "in:P533",
+   "property": "P533",
+   "relation": "P533",
+   "direction": "in",
+   "items": [
+    {
+     "id": "Q19085",
+     "label": "killing of Osama bin Laden",
+     "description": "2011 killing by U.S. special forces in Pakistan",
+     "kind": "Historical event"
+    }
+   ]
+  },
+  {
+   "key": "in:P8032",
+   "property": "P8032",
+   "relation": "P8032",
+   "direction": "in",
+   "items": [
+    {
+     "id": "Q19085",
+     "label": "killing of Osama bin Laden",
+     "description": "2011 killing by U.S. special forces in Pakistan",
+     "kind": "Historical event"
+    }
+   ]
+  },
+  {
+   "key": "in:P50",
+   "property": "P50",
+   "relation": "P50",
+   "direction": "in",
+   "items": [
+    {
+     "id": "Q2400717",
+     "label": "Osama bin Laden's Declaration of War",
+     "description": "1996 declaration",
+     "kind": "Source"
+    }
+   ]
+  },
+  {
+   "key": "in:P488",
+   "property": "P488",
+   "relation": "P488",
+   "direction": "in",
+   "items": [
+    {
+     "id": "Q34490",
+     "label": "Al-Qaeda",
+     "description": "Salafi jihadist militant organization",
+     "kind": "Organisation"
+    }
+   ]
+  }
+ ],
+ "capped": false,
+ "errors": {}
+}

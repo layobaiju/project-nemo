@@ -1,0 +1,8 @@
+node_modules/
+dist/
+work/
+tsconfig.tsbuildinfo
+*.log
+# Your workspace: projects, boards, watchlist, backups and the host secret + LAN access code.
+# It stays on the Windows host and is never committed; a fresh install creates its own.
+data/

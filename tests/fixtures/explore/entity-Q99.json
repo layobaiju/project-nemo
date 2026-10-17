@@ -1,0 +1,70 @@
+{
+ "entities": {
+  "Q99": {
+   "type": "item",
+   "id": "Q99",
+   "labels": {
+    "en": {
+     "language": "en",
+     "value": "Small archive collection"
+    }
+   },
+   "descriptions": {
+    "en": {
+     "language": "en",
+     "value": "collection without an English Wikipedia article"
+    }
+   },
+   "aliases": {},
+   "claims": {
+    "P31": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P31",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 9388534,
+         "id": "Q9388534"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P625": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P625",
+       "datatype": "globe-coordinate",
+       "datavalue": {
+        "value": {
+         "latitude": 51.5,
+         "longitude": -0.12,
+         "precision": 0.01,
+         "globe": "http://www.wikidata.org/entity/Q2"
+        },
+        "type": "globecoordinate"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ]
+   },
+   "sitelinks": {
+    "dewiki": {
+     "site": "dewiki",
+     "title": "Kleine Sammlung",
+     "badges": [],
+     "url": "https://de.wikipedia.org/wiki/Kleine_Sammlung"
+    }
+   }
+  }
+ }
+}

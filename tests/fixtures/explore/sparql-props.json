@@ -1,0 +1,175 @@
+{
+ "head": {
+  "vars": [
+   "p",
+   "pLabel",
+   "fmt"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P31"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "instance of"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P569"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "date of birth"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P19"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "place of birth"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P570"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "date of death"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P20"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "place of death"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P27"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "country of citizenship"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P463"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "member of"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P106"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "occupation"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P793"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "significant event"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P2048"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "height"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P1559"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "name in native language"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P214"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "VIAF cluster ID"
+    },
+    "fmt": {
+     "type": "literal",
+     "value": "https://viaf.org/en/viaf/$1"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P244"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Library of Congress Authorities ID"
+    },
+    "fmt": {
+     "type": "literal",
+     "value": "https://id.loc.gov/authorities/$1"
+    }
+   },
+   {
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/P856"
+    },
+    "pLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "official website"
+    }
+   }
+  ]
+ }
+}

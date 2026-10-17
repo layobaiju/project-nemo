@@ -1,0 +1,32 @@
+[
+ {
+  "id": "Q5590434",
+  "label": "History of the United States (1991–2008)",
+  "date": "1991",
+  "endDate": "2008",
+  "coord": null,
+  "place": ""
+ },
+ {
+  "id": "Q10806",
+  "label": "September 11 attacks",
+  "date": "2001-09-11",
+  "endDate": "",
+  "coord": [
+   -74.0134,
+   40.7115
+  ],
+  "place": "New York City"
+ },
+ {
+  "id": "Q19085",
+  "label": "killing of Osama bin Laden",
+  "date": "2011-05-02",
+  "endDate": "",
+  "coord": [
+   73.242439,
+   34.169308
+  ],
+  "place": "Osama bin Laden's compound in Abbottabad (2005-2012)"
+ }
+]

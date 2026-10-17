@@ -1,0 +1,154 @@
+{
+ "head": {
+  "vars": [
+   "item",
+   "itemLabel",
+   "itemDescription",
+   "p"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q19085"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "killing of Osama bin Laden"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "2011 killing by U.S. special forces in Pakistan"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P533"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q19085"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "killing of Osama bin Laden"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "2011 killing by U.S. special forces in Pakistan"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P8032"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2400717"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Osama bin Laden's Declaration of War"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "1996 declaration"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P50"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34490"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Al-Qaeda"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Salafi jihadist militant organization"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P112"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34490"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Al-Qaeda"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Salafi jihadist militant organization"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P488"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1194962"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Maktab al-Khidamat"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "organization"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P112"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1317"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Osama bin Laden"
+    },
+    "itemDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "founder of al-Qaeda (1957–2011)"
+    },
+    "p": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/prop/direct/P463"
+    }
+   }
+  ]
+ }
+}

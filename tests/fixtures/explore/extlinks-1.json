@@ -1,0 +1,26 @@
+{
+ "continue": {
+  "elcontinue": "1099039259",
+  "continue": "||"
+ },
+ "query": {
+  "pages": [
+   {
+    "pageid": 1,
+    "ns": 0,
+    "title": "Osama bin Laden",
+    "extlinks": [
+     {
+      "url": "http://www.spiegel.de/international/world/0,1518,544921,00.html"
+     },
+     {
+      "url": "//www.fbi.gov/wanted/topten/usama-bin-laden"
+     },
+     {
+      "url": "http://www.spiegel.de/international/world/0,1518,544921,00.html"
+     }
+    ]
+   }
+  ]
+ }
+}

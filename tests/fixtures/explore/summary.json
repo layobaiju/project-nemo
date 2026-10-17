@@ -1,0 +1,17 @@
+{
+ "type": "standard",
+ "title": "Osama bin Laden",
+ "description": "Founder of al-Qaeda (1957–2011)",
+ "wikibase_item": "Q1317",
+ "thumbnail": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osama_bin_Laden_portrait.jpg/330px-Osama_bin_Laden_portrait.jpg",
+  "width": 330,
+  "height": 399
+ },
+ "content_urls": {
+  "desktop": {
+   "page": "https://en.wikipedia.org/wiki/Osama_bin_Laden"
+  }
+ },
+ "extract": "Osama bin Laden was the founder and first general emir of al-Qaeda, a Salafi jihadist militant organization, from 1988 until his killing in 2011."
+}

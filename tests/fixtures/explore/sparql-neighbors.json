@@ -1,0 +1,246 @@
+{
+ "head": {
+  "vars": [
+   "i",
+   "iDescription",
+   "t",
+   "tLabel",
+   "coord",
+   "date"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3692"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "capital of Saudi Arabia"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5119"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "capital city"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(46.715 24.638333333)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3065522"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "compound in Pakistan"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q41176"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "building"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(73.242444444 34.169333333)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "country in West Asia"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3624078"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "sovereign state"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(44.116667 23.716667)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34490"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Salafi jihadist militant organization"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2752856"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "terrorist organization"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34490"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Salafi jihadist militant organization"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q17149090"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "armed organization"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q13582652"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "engineer specialising in civil engineering"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q28640"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "profession"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q10806"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "2001 terrorist attacks in the United States"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2223653"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "terrorist attack"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "2001-09-11T00:00:00Z"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q19085"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "2011 killing by U.S. special forces in Pakistan"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q16510064"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "killing"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(73.242439 34.169308)"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "2011-05-02T00:00:00Z"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q2400717"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "1996 declaration"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q47461344"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "written work"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1194962"
+    },
+    "iDescription": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "organization"
+    },
+    "t": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q43229"
+    },
+    "tLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "organization"
+    }
+   }
+  ]
+ }
+}

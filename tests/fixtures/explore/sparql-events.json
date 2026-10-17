@@ -1,0 +1,171 @@
+{
+ "head": {
+  "vars": [
+   "item",
+   "itemLabel",
+   "date",
+   "prec",
+   "end",
+   "endPrec",
+   "coord",
+   "pc",
+   "placeLabel"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q19085"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "killing of Osama bin Laden"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "2011-05-02T00:00:00Z"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "11"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(73.242439 34.169308)"
+    },
+    "placeLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Osama bin Laden's compound in Abbottabad (2005-2012)"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q10806"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "September 11 attacks"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "2001-09-11T00:00:00Z"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "11"
+    },
+    "placeLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Shanksville"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q10806"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "September 11 attacks"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "2001-09-11T00:00:00Z"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "11"
+    },
+    "pc": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(-74.0134 40.7115)"
+    },
+    "placeLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "New York City"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5590434"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "History of the United States (1991–2008)"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "1991-01-01T00:00:00Z"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "9"
+    },
+    "end": {
+     "type": "literal",
+     "value": "2008-01-01T00:00:00Z"
+    },
+    "endPrec": {
+     "type": "literal",
+     "value": "9"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q56411183"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "wedding of Osama bin Laden and his fifth wife"
+    },
+    "date": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/.well-known/genid/183ed660540f7344c9b62a215ea5de51"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "11"
+    }
+   },
+   {
+    "item": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q1317"
+    },
+    "itemLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Osama bin Laden"
+    },
+    "date": {
+     "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+     "type": "literal",
+     "value": "1957-03-10T00:00:00Z"
+    },
+    "prec": {
+     "type": "literal",
+     "value": "11"
+    }
+   }
+  ]
+ }
+}

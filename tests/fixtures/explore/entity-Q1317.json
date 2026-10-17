@@ -1,0 +1,336 @@
+{
+ "entities": {
+  "Q1317": {
+   "type": "item",
+   "id": "Q1317",
+   "labels": {
+    "en": {
+     "language": "en",
+     "value": "Osama bin Laden"
+    }
+   },
+   "descriptions": {
+    "en": {
+     "language": "en",
+     "value": "founder of al-Qaeda (1957–2011)"
+    }
+   },
+   "aliases": {
+    "en": [
+     {
+      "language": "en",
+      "value": "Usama bin Laden"
+     }
+    ]
+   },
+   "claims": {
+    "P31": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P31",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 5,
+         "id": "Q5"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P569": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P569",
+       "datatype": "time",
+       "datavalue": {
+        "value": {
+         "time": "+1957-03-10T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        },
+        "type": "time"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P19": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P19",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 3692,
+         "id": "Q3692"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P570": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P570",
+       "datatype": "time",
+       "datavalue": {
+        "value": {
+         "time": "+2011-05-02T00:00:00Z",
+         "timezone": 0,
+         "before": 0,
+         "after": 0,
+         "precision": 11,
+         "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+        },
+        "type": "time"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P20": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P20",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 3065522,
+         "id": "Q3065522"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P27": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P27",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 851,
+         "id": "Q851"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     },
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P27",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 223050,
+         "id": "Q223050"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "deprecated"
+     }
+    ],
+    "P463": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P463",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 34490,
+         "id": "Q34490"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P106": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P106",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 13582652,
+         "id": "Q13582652"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P793": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P793",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 10806,
+         "id": "Q10806"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     },
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P793",
+       "datatype": "wikibase-item",
+       "datavalue": {
+        "value": {
+         "entity-type": "item",
+         "numeric-id": 19085,
+         "id": "Q19085"
+        },
+        "type": "wikibase-entityid"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P2048": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P2048",
+       "datatype": "quantity",
+       "datavalue": {
+        "value": {
+         "amount": "+195",
+         "unit": "http://www.wikidata.org/entity/Q174728"
+        },
+        "type": "quantity"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P1559": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P1559",
+       "datatype": "monolingualtext",
+       "datavalue": {
+        "value": {
+         "text": "أسامة بن لادن",
+         "language": "ar"
+        },
+        "type": "monolingualtext"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P214": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P214",
+       "datatype": "external-id",
+       "datavalue": {
+        "value": "97678624",
+        "type": "string"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P244": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P244",
+       "datatype": "external-id",
+       "datavalue": {
+        "value": "n98940446",
+        "type": "string"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ],
+    "P856": [
+     {
+      "mainsnak": {
+       "snaktype": "value",
+       "property": "P856",
+       "datatype": "url",
+       "datavalue": {
+        "value": "https://example.org/official",
+        "type": "string"
+       }
+      },
+      "type": "statement",
+      "rank": "normal"
+     }
+    ]
+   },
+   "sitelinks": {
+    "enwiki": {
+     "site": "enwiki",
+     "title": "Osama bin Laden",
+     "badges": [],
+     "url": "https://en.wikipedia.org/wiki/Osama_bin_Laden"
+    },
+    "frwiki": {
+     "site": "frwiki",
+     "title": "Oussama ben Laden",
+     "badges": [],
+     "url": "https://fr.wikipedia.org/wiki/Oussama_ben_Laden"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "id": "Q1317",
+ "label": "Osama bin Laden",
+ "description": "founder of al-Qaeda (1957–2011)",
+ "aliases": [
+  "Usama bin Laden"
+ ],
+ "types": [
+  "human"
+ ],
+ "isHuman": true,
+ "wikipedia": {
+  "title": "Osama bin Laden",
+  "url": "https://en.wikipedia.org/wiki/Osama_bin_Laden",
+  "extract": "Osama bin Laden was the founder and first general emir of al-Qaeda, a Salafi jihadist militant organization, from 1988 until his killing in 2011.",
+  "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osama_bin_Laden_portrait.jpg/330px-Osama_bin_Laden_portrait.jpg"
+ },
+ "facts": [
+  {
+   "property": "P31",
+   "label": "instance of",
+   "values": [
+    {
+     "text": "human",
+     "id": "Q5"
+    }
+   ]
+  },
+  {
+   "property": "P569",
+   "label": "date of birth",
+   "values": [
+    {
+     "text": "1957-03-10",
+     "date": "1957-03-10"
+    }
+   ]
+  },
+  {
+   "property": "P19",
+   "label": "place of birth",
+   "values": [
+    {
+     "text": "Riyadh",
+     "id": "Q3692",
+     "coord": [
+      46.715,
+      24.638333333
+     ]
+    }
+   ]
+  },
+  {
+   "property": "P570",
+   "label": "date of death",
+   "values": [
+    {
+     "text": "2011-05-02",
+     "date": "2011-05-02"
+    }
+   ]
+  },
+  {
+   "property": "P20",
+   "label": "place of death",
+   "values": [
+    {
+     "text": "Osama bin Laden's compound in Abbottabad (2005-2012)",
+     "id": "Q3065522",
+     "coord": [
+      73.242444444,
+      34.169333333
+     ]
+    }
+   ]
+  },
+  {
+   "property": "P27",
+   "label": "country of citizenship",
+   "values": [
+    {
+     "text": "Saudi Arabia",
+     "id": "Q851",
+     "coord": [
+      44.116667,
+      23.716667
+     ]
+    }
+   ]
+  },
+  {
+   "property": "P463",
+   "label": "member of",
+   "values": [
+    {
+     "text": "Al-Qaeda",
+     "id": "Q34490"
+    }
+   ]
+  },
+  {
+   "property": "P106",
+   "label": "occupation",
+   "values": [
+    {
+     "text": "civil engineer",
+     "id": "Q13582652"
+    }
+   ]
+  },
+  {
+   "property": "P793",
+   "label": "significant event",
+   "values": [
+    {
+     "text": "September 11 attacks",
+     "id": "Q10806"
+    },
+    {
+     "text": "killing of Osama bin Laden",
+     "id": "Q19085",
+     "coord": [
+      73.242439,
+      34.169308
+     ]
+    }
+   ]
+  },
+  {
+   "property": "P2048",
+   "label": "height",
+   "values": [
+    {
+     "text": "195 centimetre"
+    }
+   ]
+  },
+  {
+   "property": "P1559",
+   "label": "name in native language",
+   "values": [
+    {
+     "text": "أسامة بن لادن (ar)"
+    }
+   ]
+  }
+ ],
+ "coord": null,
+ "dates": {
+  "start": "1957-03-10",
+  "end": "2011-05-02",
+  "kind": "life"
+ },
+ "links": {
+  "references": [
+   {
+    "url": "http://www.spiegel.de/international/world/0,1518,544921,00.html",
+    "label": "www.spiegel.de",
+    "note": "Source cited in the Wikipedia article"
+   },
+   {
+    "url": "https://www.fbi.gov/wanted/topten/usama-bin-laden",
+    "label": "www.fbi.gov",
+    "note": "Source cited in the Wikipedia article"
+   },
+   {
+    "url": "https://www.9-11commission.gov/report/911Report.pdf",
+    "label": "www.9-11commission.gov",
+    "note": "Source cited in the Wikipedia article"
+   }
+  ],
+  "databases": [
+   {
+    "url": "https://example.org/official",
+    "label": "official website",
+    "note": ""
+   },
+   {
+    "url": "https://viaf.org/en/viaf/97678624",
+    "label": "VIAF cluster ID",
+    "note": "97678624"
+   },
+   {
+    "url": "https://id.loc.gov/authorities/n98940446",
+    "label": "Library of Congress Authorities ID",
+    "note": "n98940446"
+   }
+  ],
+  "languages": [
+   {
+    "url": "https://en.wikipedia.org/wiki/Osama_bin_Laden",
+    "label": "Osama bin Laden (enwiki)",
+    "note": "enwiki"
+   },
+   {
+    "url": "https://fr.wikipedia.org/wiki/Oussama_ben_Laden",
+    "label": "Oussama ben Laden (frwiki)",
+    "note": "frwiki"
+   }
+  ]
+ },
+ "attribution": "Text from Wikipedia (CC BY-SA 4.0). Facts and links from Wikidata (CC0). News index from the GDELT Project.",
+ "errors": {},
+ "fetchedAt": "2026-10-16T00:00:00.000Z"
+}

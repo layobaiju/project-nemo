@@ -1,0 +1,32 @@
+{
+ "articles": [
+  {
+   "url": "https://news.example.com/a",
+   "url_mobile": "",
+   "title": "Twenty years after Abbottabad",
+   "seendate": "20260501T120000Z",
+   "socialimage": "",
+   "domain": "news.example.com",
+   "language": "English",
+   "sourcecountry": "United Kingdom"
+  },
+  {
+   "url": "https://news.example.org/b",
+   "url_mobile": "",
+   "title": "Archive release on bin Laden documents",
+   "seendate": "20251102T080000Z",
+   "socialimage": "",
+   "domain": "news.example.org",
+   "language": "English",
+   "sourcecountry": "United States"
+  },
+  {
+   "url": "ftp://bad.example/c",
+   "title": "Not a web link",
+   "seendate": "20250101T000000Z",
+   "domain": "bad.example",
+   "language": "English",
+   "sourcecountry": ""
+  }
+ ]
+}

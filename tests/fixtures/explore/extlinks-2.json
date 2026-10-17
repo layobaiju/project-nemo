@@ -1,0 +1,20 @@
+{
+ "batchcomplete": true,
+ "query": {
+  "pages": [
+   {
+    "pageid": 1,
+    "ns": 0,
+    "title": "Osama bin Laden",
+    "extlinks": [
+     {
+      "url": "https://www.9-11commission.gov/report/911Report.pdf"
+     },
+     {
+      "url": "https://www.fbi.gov/wanted/topten/usama-bin-laden"
+     }
+    ]
+   }
+  ]
+ }
+}

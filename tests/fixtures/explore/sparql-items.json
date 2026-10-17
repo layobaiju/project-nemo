@@ -1,0 +1,132 @@
+{
+ "head": {
+  "vars": [
+   "i",
+   "iLabel",
+   "coord"
+  ]
+ },
+ "results": {
+  "bindings": [
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q5"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "human"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3692"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Riyadh"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(46.715 24.638333333)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q3065522"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Osama bin Laden's compound in Abbottabad (2005-2012)"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(73.242444444 34.169333333)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q851"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Saudi Arabia"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(44.116667 23.716667)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q34490"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "Al-Qaeda"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q13582652"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "civil engineer"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q10806"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "September 11 attacks"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q19085"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "killing of Osama bin Laden"
+    },
+    "coord": {
+     "datatype": "http://www.opengis.net/ont/geosparql#wktLiteral",
+     "type": "literal",
+     "value": "Point(73.242439 34.169308)"
+    }
+   },
+   {
+    "i": {
+     "type": "uri",
+     "value": "http://www.wikidata.org/entity/Q174728"
+    },
+    "iLabel": {
+     "xml:lang": "en",
+     "type": "literal",
+     "value": "centimetre"
+    }
+   }
+  ]
+ }
+}
