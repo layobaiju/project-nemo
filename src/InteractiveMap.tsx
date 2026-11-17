@@ -8,8 +8,21 @@ import { VERIFICATION_COLORS, formatDateRange, hasCoords } from './model.ts';
 // Version-matched worker copied into the build by scripts/sync-maplibre-worker.mjs (served locally, no CDN).
 setWorkerUrl('/assets/maplibre-gl-worker.mjs');
 
-export type BasemapMode = 'online' | 'offline';
+export type BasemapMode = 'online' | 'esri' | 'eox' | 'offline';
 export type BasemapStatus = { mode: BasemapMode; ok: boolean; message?: string };
+export const BASEMAP_LABELS: Record<BasemapMode, string> = {
+  online: 'Streets: OpenFreeMap (online)',
+  esri: 'Satellite: Esri World Imagery (online)',
+  eox: 'Satellite: Sentinel-2 cloudless (online)',
+  offline: 'Offline country outlines',
+};
+type Satellite = 'esri' | 'eox';
+export const SAT_ATTRIBUTION: Record<Satellite, string> = {
+  esri: 'Imagery © Esri, Maxar, Earthstar Geographics',
+  eox: '<a href="https://s2maps.eu" target="_blank" rel="noreferrer">Sentinel-2 cloudless 2023</a> © EOX (Copernicus data), CC BY-NC-SA 4.0',
+};
+const SAT_MAX_ZOOM: Record<Satellite, number> = { esri: 19, eox: 15 };
+const isSatellite = (b: BasemapMode): b is Satellite => b === 'esri' || b === 'eox';
 type Props = {
   events: EventItem[];
   similarIds: string[];
@@ -41,18 +54,39 @@ export async function onlineStyle(): Promise<StyleSpecification> {
   return data;
 }
 let countriesCache: unknown = null;
-export async function offlineStyle(): Promise<StyleSpecification> {
+const NATURAL_EARTH = 'Country outlines: <a href="https://www.naturalearthdata.com/" target="_blank">Natural Earth</a> (public domain)';
+async function countries() {
   if (!countriesCache) {
     const [{ feature }, topo] = await Promise.all([import('topojson-client'), fetch(countriesUrl).then(r => r.json())]);
     countriesCache = feature(topo, topo.objects.countries);
   }
+  return { type: 'geojson' as const, data: countriesCache as any, attribution: NATURAL_EARTH };
+}
+export async function offlineStyle(): Promise<StyleSpecification> {
   return {
     version: 8, name: 'Atlas offline outline',
-    sources: { 'atlas-countries': { type: 'geojson', data: countriesCache as any, attribution: 'Country outlines: <a href="https://www.naturalearthdata.com/" target="_blank">Natural Earth</a> (public domain)' } },
+    sources: { 'atlas-countries': await countries() },
     layers: [
       { id: 'atlas-bg', type: 'background', paint: { 'background-color': '#10283a' } },
       { id: COUNTRY_FILL, type: 'fill', source: 'atlas-countries', paint: { 'fill-color': '#24404f' } },
       { id: COUNTRY_LINE, type: 'line', source: 'atlas-countries', paint: { 'line-color': '#6f97a8', 'line-width': 0.8 } },
+    ],
+  };
+}
+/** Satellite imagery through the host, with the bundled country borders on top (imagery has no labels). */
+export async function satelliteStyle(b: Satellite): Promise<StyleSpecification> {
+  return {
+    version: 8, name: `Atlas satellite (${b})`,
+    sources: {
+      sat: { type: 'raster', tiles: [`${location.origin}/api/map/sat/${b}/{z}/{x}/{y}`], tileSize: 256, maxzoom: SAT_MAX_ZOOM[b], attribution: SAT_ATTRIBUTION[b] },
+      'atlas-countries': await countries(),
+    },
+    layers: [
+      { id: 'atlas-bg', type: 'background', paint: { 'background-color': '#0b121b' } },
+      { id: 'atlas-sat', type: 'raster', source: 'sat' },
+      // Invisible fill so hovering still names the country.
+      { id: COUNTRY_FILL, type: 'fill', source: 'atlas-countries', paint: { 'fill-color': '#000000', 'fill-opacity': 0 } },
+      { id: COUNTRY_LINE, type: 'line', source: 'atlas-countries', paint: { 'line-color': '#ffffff', 'line-opacity': 0.6, 'line-width': 0.8 } },
     ],
   };
 }
@@ -114,8 +148,17 @@ export default function InteractiveMap(props: Props) {
   };
 
   const loadStyle = async (mode: BasemapMode): Promise<StyleSpecification> => {
+    // Satellite imagery has detail far below the streets style's useful range.
+    map.current?.setMaxZoom(mode === 'esri' ? 18 : 14);
     if (mode === 'offline') { latest.current.onStatus({ mode: 'offline', ok: true }); return offlineStyle(); }
     try {
+      if (isSatellite(mode)) {
+        // One cheap probe tile (cached by the host) so an unreachable provider falls back with a reason.
+        const probe = await fetch(`/api/map/sat/${mode}/0/0/0`, { credentials: 'same-origin', signal: AbortSignal.timeout(15000) });
+        if (!probe.ok) throw new Error(`The Windows host could not get ${mode === 'esri' ? 'Esri' : 'Sentinel-2'} imagery (HTTP ${probe.status}). Is this PC online?`);
+        latest.current.onStatus({ mode, ok: true });
+        return satelliteStyle(mode);
+      }
       const s = await onlineStyle();
       latest.current.onStatus({ mode: 'online', ok: true });
       return s;
@@ -192,7 +235,8 @@ export default function InteractiveMap(props: Props) {
   }, [basemap]);
 
   useEffect(() => { const s = map.current?.getSource(SOURCE) as GeoJSONSource | undefined; s?.setData(features as any); }, [features]);
-  useEffect(() => { const m = map.current; if (m?.isStyleLoaded()) applyVisibility(m); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [showCountries, showCasualties]);
+  // Not isStyleLoaded(): it stays false while tiles stream in, which is most of the time on satellite imagery.
+  useEffect(() => { const m = map.current; if (m?.getStyle()?.layers) applyVisibility(m); /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [showCountries, showCasualties]);
   useEffect(() => { if (focus && map.current) map.current.easeTo({ center: [focus.lng, focus.lat], zoom: Math.max(map.current.getZoom(), 3.5), duration: 900 }); }, [focus?.n]);
   useEffect(() => { if (map.current) map.current.getCanvas().style.cursor = props.pickMode ? 'crosshair' : ''; }, [props.pickMode]);
   // fitBounds needs no loaded style; isStyleLoaded() stays false while tiles load, so don't wait for it.
@@ -201,7 +245,7 @@ export default function InteractiveMap(props: Props) {
   return <div className={'interactive-map-shell' + (props.pickMode ? ' picking' : '')}>
     <div ref={host} className="interactive-map" />
     {hoverCountry && <div className="map-hover-country">{hoverCountry}</div>}
-    {tileWarning && basemap === 'online' && <div className="map-tile-warning">Some basemap tiles failed to load. Check the Windows host’s internet connection, or switch to the offline outline.</div>}
+    {tileWarning && basemap !== 'offline' && <div className="map-tile-warning">Some {isSatellite(basemap) ? 'satellite' : 'basemap'} tiles failed to load. Check the Windows host’s internet connection, or switch to the offline outline.</div>}
     {!props.compact && <div className="map-operation-note"><span className="live-dot" /> {props.pickMode ? 'Click the globe to set the record’s location' : 'Drag to pan · right-drag or two fingers to rotate · scroll or pinch to zoom · click to add a record'}</div>}
   </div>;
 }

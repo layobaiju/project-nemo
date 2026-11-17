@@ -298,7 +298,7 @@ export type LayerDef = { key: string; rule: string; test?: (e: EventItem) => boo
 /** A record is shown when it matches at least one enabled layer. "Countries" controls basemap labels/borders. */
 export const LAYERS: LayerDef[] = [
   { key: 'Events', rule: 'Records in general categories (event, incident, country, political, humanitarian).', test: e => !DEDICATED.has(e.category) },
-  { key: 'Countries', rule: 'Basemap country labels and borders (does not filter records).' },
+  { key: 'Countries', rule: 'Basemap country labels and borders; on satellite imagery, country borders only (does not filter records).' },
   { key: 'Conflicts', rule: 'Category Conflict, or any record with a conflict classification or conflict name.', test: e => e.category === 'Conflict' || !!e.classification || !!e.conflictName },
   { key: 'Actors', rule: 'Category Actor, or any record listing at least one actor.', test: e => e.category === 'Actor' || e.actors.length > 0 },
   { key: 'Armed groups', rule: 'Category Armed organization, or a listed actor of type Armed group.', test: e => e.category === 'Armed organization' || e.actors.some(a => a.type === 'Armed group') },

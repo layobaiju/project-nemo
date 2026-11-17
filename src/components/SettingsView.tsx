@@ -6,7 +6,9 @@ import { forgetDevice, getHostInfo, rotateAccessCode, type HostInfo } from '../a
 const SERVICES: [string, string, string][] = [
   ['OpenFreeMap (basemap tiles, styles, fonts)', 'Free public instance; no key, registration or view limits. Attribution required (shown on the map). Needs internet on the Windows host.', 'https://openfreemap.org/'],
   ['OpenStreetMap data (in the basemap)', 'ODbL 1.0, © OpenStreetMap contributors; via OpenMapTiles schema.', 'https://www.openstreetmap.org/copyright'],
-  ['Natural Earth country outlines (offline fallback)', 'Public domain; bundled through the world-atlas package (ISC).', 'https://www.naturalearthdata.com/'],
+  ['Esri World Imagery (satellite, World globe and Map page)', 'No key or account. Attribution "Esri, Maxar, Earthstar Geographics" is shown on the map. Esri’s terms of use apply: fine for personal research; check them before commercial use. Needs internet on the Windows host.', 'https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9'],
+  ['EOX Sentinel-2 cloudless 2023 (satellite, World globe and Map page)', 'CC BY-NC-SA 4.0: non-commercial use only, with attribution (shown on the map). Contains modified Copernicus Sentinel data 2023.', 'https://s2maps.eu/'],
+  ['Natural Earth country outlines (offline fallback, satellite borders)', 'Public domain; bundled through the world-atlas package (ISC).', 'https://www.naturalearthdata.com/'],
   ['MapLibre GL JS', 'BSD-3-Clause. Worker file is served from this host.', 'https://maplibre.org/'],
   ['React Flow (@xyflow/react)', 'MIT. Its small attribution badge is hidden, which the MIT licence allows; the authors ask commercial users to consider supporting them.', 'https://reactflow.dev/'],
   ['React, lucide-react, topojson-client, Vite, TypeScript', 'MIT / ISC / Apache-2.0 open-source licences.', ''],

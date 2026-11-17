@@ -6,7 +6,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { TerraDraw, TerraDrawCircleMode, TerraDrawLineStringMode, TerraDrawPolygonMode, TerraDrawRectangleMode, TerraDrawSelectMode, type GeoJSONStoreFeatures } from 'terra-draw';
 import { TerraDrawMapLibreGLAdapter } from 'terra-draw-maplibre-gl-adapter';
 import type { EventItem, MapFeature, MapGeometry, Resource } from './types.ts';
-import { offlineStyle, onlineStyle } from './InteractiveMap.tsx';
+import { SAT_ATTRIBUTION, offlineStyle, onlineStyle } from './InteractiveMap.tsx';
 import { VERIFICATION_COLORS, hasCoords, uid } from './model.ts';
 import { bearing, formatArea, formatDistance, lineKm, lineMidpoint, polygonCenter, polygonKm2, type LngLat } from './geo.ts';
 import { RESOURCE_STATUS } from './ops.ts';
@@ -34,11 +34,6 @@ type Props = {
 const DRAW_MODE: Partial<Record<Tool, string>> = { route: 'linestring', area: 'polygon', rectangle: 'rectangle', circle: 'circle', measure: 'measure' };
 const SHAPES = 'ops-shapes', RECORDS = 'ops-records';
 const SHAPE_LAYERS = ['ops-route-line', 'ops-route-casing', 'ops-area-fill', 'ops-area-line'];
-const SAT_ATTRIBUTION = {
-  esri: 'Imagery © Esri, Maxar, Earthstar Geographics',
-  eox: '<a href="https://s2maps.eu" target="_blank" rel="noreferrer">Sentinel-2 cloudless 2023</a> © EOX (Copernicus data), CC BY-NC-SA 4.0',
-};
-
 async function styleFor(b: Basemap): Promise<StyleSpecification> {
   if (b === 'esri' || b === 'eox') {
     return {

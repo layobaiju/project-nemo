@@ -269,15 +269,21 @@ Turn on **Find similar historical records** on the World view and select a recor
 Similarity is a research lead. It does **not** show coordination, shared responsibility, causation or a common actor.
 
 ### Map
-- The globe is MapLibre, and it rotates, zooms and pans with pinch and two-finger rotate on iPad. Country labels and borders come from **OpenFreeMap**, proxied through the Windows host so Mac and iPad only need to reach the PC.
+- The globe is MapLibre, and it rotates, zooms and pans with pinch and two-finger rotate on iPad. Everything is proxied through the Windows host, so Mac and iPad only need to reach the PC.
+- **Basemap** (toolbar menu, remembered per device):
+  - **Streets: OpenFreeMap** (default): country labels and borders.
+  - **Satellite: Esri World Imagery:** detailed imagery; zooms closer (to level 18).
+  - **Satellite: Sentinel-2 cloudless:** EOX's 10 m cloud-free 2023 mosaic; non-commercial use only.
+  - **Offline country outlines:** bundled Natural Earth, no internet needed.
+  - Satellite images have no labels, so Atlas draws the bundled Natural Earth borders on top, and hovering shows the country name. These are the same free sources as the Map page; no key or account.
 - The MapLibre worker is copied into the build from the installed package, so it is always served locally.
 - Markers are coloured by verification status. Clicking a marker shows its details and an **Open record** button.
 - **Search** covers title, place, actor, country and tags. **Date filters** offer presets or from/to fields, with an option to keep undated records. There is also a verification filter.
 - **Layers:** Events, Countries, Conflicts, Actors, Armed groups, State forces, Casualties, Equipment, Sources.
   - A record shows when it matches **any** enabled layer; *only* isolates one layer, and the **?** button explains each rule.
-  - *Countries* controls the basemap labels and borders.
+  - *Countries* controls the basemap labels and borders (borders only on satellite imagery).
   - *Casualties* also draws rings sized by the reported figure.
-- **If the basemap can't load,** Atlas says why (for example, the host is offline) and switches to bundled **Natural Earth** country outlines. Records and markers keep working. Hovering shows the country name. You can also choose *Basemap: offline outlines* by hand.
+- **If the basemap can't load** (streets or satellite), Atlas says why (for example, the host is offline) and switches to bundled **Natural Earth** country outlines; *Retry online* tries your chosen basemap again. Records and markers keep working. Hovering shows the country name. You can also choose *Offline country outlines* by hand.
 - A data-quality filter lists records **without coordinates** (older flat-map records), **unsourced** records and untouched **placeholders**. Placeholders can be removed after confirmation; nothing is deleted automatically.
 - **Find place** (toolbar) searches OpenStreetMap for a city, town, village or landmark. Picking a result frames it on the globe; records are not filtered.
 
@@ -364,8 +370,8 @@ Atlas uses no paid service, trial, account or API key.
 | [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Reusing_Wikipedia_content) (Explore) | Article text CC BY-SA 4.0; Atlas shows attribution and saves the article as a cited source. Free API, no account. | Yes, on the Windows host |
 | [Wikidata](https://www.wikidata.org/wiki/Wikidata:Licensing) (Explore) | CC0. Facts, dates, places, related events and database links through the free API and Query Service. | Yes, on the Windows host |
 | [GDELT Project](https://www.gdeltproject.org/) (Explore news) | Free news index; cite the GDELT Project. One request every 5 seconds. Articles belong to their publishers: Atlas shows titles and links only. | Yes, on the Windows host |
-| [Esri World Imagery](https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9) (Map workspace) | No key or account. Attribution "Esri, Maxar, Earthstar Geographics" is shown on the map. **Esri's terms of use apply:** fine for personal research; check them before any commercial use. | Yes, on the Windows host |
-| [EOX Sentinel-2 cloudless 2023](https://s2maps.eu/) (Map workspace) | CC BY-NC-SA 4.0: **non-commercial use only**, with attribution (shown on the map). Contains modified Copernicus Sentinel data 2023. | Yes, on the Windows host |
+| [Esri World Imagery](https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9) (World globe and Map workspace) | No key or account. Attribution "Esri, Maxar, Earthstar Geographics" is shown on the map. **Esri's terms of use apply:** fine for personal research; check them before any commercial use. | Yes, on the Windows host |
+| [EOX Sentinel-2 cloudless 2023](https://s2maps.eu/) (World globe and Map workspace) | CC BY-NC-SA 4.0: **non-commercial use only**, with attribution (shown on the map). Contains modified Copernicus Sentinel data 2023. | Yes, on the Windows host |
 | [OpenStreetMap Nominatim](https://nominatim.org/) (place search on both maps) | Free public service under the [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/): at most one request per second, results cached, no search-as-you-type. Data ODbL, © OpenStreetMap contributors, shown with the results. | Yes, on the Windows host |
 | Terra Draw, terra-draw-maplibre-gl-adapter (Map workspace drawing) | MIT | No |
 
@@ -435,6 +441,10 @@ npm.cmd run build    # type-check + production build (also syncs the MapLibre wo
 | `src/similarity.ts`, `src/graph.ts` | Explainable similarity; graph layouts and link suggestions |
 | `src/components/*` | World, Graph, Folders, Timeline, Settings, record editor, import wizard, sketch |
 | `tests/*.test.mjs` | Node built-in test runner; no extra dependencies. `tests/fixtures/explore` stands in for the public sources, so tests never use the network |
+
+### Unreleased
+- **Satellite imagery on the World globe:** the basemap menu now offers Esri World Imagery and EOX Sentinel-2 cloudless alongside OpenFreeMap streets and the offline outlines, with Natural Earth borders and country names on hover. No server change; same free sources and attribution as the Map page.
+- Fixed: the *Countries* layer toggle sometimes did nothing while map tiles were still loading.
 
 ### Changes in 0.8.0
 - New **Watchlist** page:

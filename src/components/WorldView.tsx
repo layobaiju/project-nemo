@@ -6,7 +6,7 @@ import { ALL_LAYERS, LAYERS, VERIFICATION, VERIFICATION_COLORS, dateSpan, format
 import type { Match } from '../similarity.ts';
 import { exportBoard, download, projectJSON, safeName } from '../exporters.ts';
 import { makeEdge, nodeSearchText, recordNode } from '../graph.ts';
-import InteractiveMap, { type BasemapMode, type BasemapStatus } from '../InteractiveMap.tsx';
+import InteractiveMap, { BASEMAP_LABELS, type BasemapMode, type BasemapStatus } from '../InteractiveMap.tsx';
 import { usePersisted } from '../usePersisted.ts';
 import { placeBounds, type Place } from '../geo.ts';
 import PlaceSearch from './PlaceSearch.tsx';
@@ -160,7 +160,7 @@ export default function WorldView({ ctx }: { ctx: Ctx }) {
           <input className="date-input" aria-label="To date" placeholder="To YYYY" value={to} onChange={e => setTo(e.target.value)} />
           <select className="time-filter" aria-label="Verification filter" value={verif} onChange={e => setVerif(e.target.value)}><option>All</option>{VERIFICATION.map(v => <option key={v}>{v}</option>)}</select>
           <button type="button" className={'button subtle' + (findPlace ? ' active' : '')} aria-expanded={findPlace} onClick={() => setFindPlace(x => !x)}><MapPin size={13} /> Find place</button>
-          <select className="time-filter" aria-label="Basemap" value={basemap} onChange={e => setBasemap(e.target.value as BasemapMode)}><option value="online">Basemap: OpenFreeMap (online)</option><option value="offline">Basemap: offline outlines</option></select>
+          <select className="time-filter" aria-label="Basemap" value={basemap} onChange={e => setBasemap(e.target.value as BasemapMode)}>{(Object.keys(BASEMAP_LABELS) as BasemapMode[]).map(b => <option key={b} value={b}>{BASEMAP_LABELS[b]}</option>)}</select>
         </div>
         {findPlace && <div className="world-place">
           <PlaceSearch autoFocus onPick={p => setPlace({ p, fit: { bounds: placeBounds(p), n: Date.now(), maxZoom: 12 } })} onClose={() => { setFindPlace(false); setPlace(null); }} />
@@ -177,7 +177,7 @@ export default function WorldView({ ctx }: { ctx: Ctx }) {
           <button className="button subtle small" onClick={() => ctx.searchWorld(query.trim())}><Globe2 size={12} /> Search the world for “{query.trim()}”</button>
         </div>}
         {(from || to) && <label className="undated-toggle"><input type="checkbox" checked={includeUndated} onChange={e => setIncludeUndated(e.target.checked)} /> Keep undated records visible while a date filter is on</label>}
-        {statusText && <div className="map-status">{statusText} <button className="text-button" onClick={() => { setBasemap('offline'); setTimeout(() => setBasemap('online'), 50); }}>Retry online</button></div>}
+        {statusText && <div className="map-status">{statusText} <button className="text-button" onClick={() => { const chosen = basemap; setBasemap('offline'); setTimeout(() => setBasemap(chosen), 50); }}>Retry online</button></div>}
         <div className="map-host">
           <InteractiveMap events={mapEvents} similarIds={similarMode ? similarIds : []} selectedId={selectedId} focus={focus} fit={place && (!focusFit || place.fit.n > focusFit.n) ? place.fit : focusFit}
             showCountries={layers.includes('Countries')} showCasualties={layers.includes('Casualties')} basemap={basemap} pickMode={ctx.pickMode}
@@ -188,7 +188,7 @@ export default function WorldView({ ctx }: { ctx: Ctx }) {
           <span className="legend-items">{VERIFICATION.map(v => <span key={v}><i style={{ background: VERIFICATION_COLORS[v] }} />{v}</span>)}<span><i className="ring" />Similar</span>{layers.includes('Casualties') && <span><i className="ring red" />Reported figure (size)</span>}</span>
           <span>{mapEvents.filter(hasCoords).length} of {board.events.length} records on the globe{board.events.length - quality.placed ? ` · ${board.events.length - quality.placed} without coordinates` : ''}</span>
         </div>
-        <p className="map-attrib-note">Basemap © OpenMapTiles / OpenStreetMap contributors via OpenFreeMap (needs internet on the Windows host). Offline outlines: Natural Earth (public domain). Borders are illustrative and may not reflect every claim.</p>
+        <p className="map-attrib-note">{basemap === 'esri' ? 'Satellite imagery © Esri, Maxar, Earthstar Geographics (Esri terms of use apply; needs internet on the Windows host). Images are mosaics of different dates.' : basemap === 'eox' ? 'Sentinel-2 cloudless 2023 © EOX, contains modified Copernicus Sentinel data; CC BY-NC-SA 4.0, non-commercial use only (needs internet on the Windows host).' : 'Basemap © OpenMapTiles / OpenStreetMap contributors via OpenFreeMap (needs internet on the Windows host).'} Country outlines: Natural Earth (public domain). Borders are illustrative and may not reflect every claim.</p>
       </div>
 
       <aside className="map-side">
